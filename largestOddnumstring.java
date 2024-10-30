@@ -6,6 +6,7 @@ public class largestOddnumstring {
         for(int i=0;i<str.length();i++){
         char currentchar=str.charAt(i);
             if((currentchar-'0')% 2!=0 && currentchar>largestodd){
+                largestodd=currentchar;
             }
         }
         if(largestodd!='0'){
