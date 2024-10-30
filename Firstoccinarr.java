@@ -24,7 +24,8 @@ public class Firstoccinarr {
         }else{
             System.out.println("element is not found in the array");
         }
-        
+        start=0;
+        end=arr.length-1;
         while(start<=end){
             int mid=(start+end)/2;
             if(arr[mid]==x){
