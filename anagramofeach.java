@@ -1,19 +1,19 @@
 import java.util.*;
-public class anagramofeach {
-    public static void main(String []args){
-        String str1="silent";
-        String str2="listen";
+public class anagramofeach{
+    public static void main(String[] args) {
+        String str1="listen";
+        String str2="silent";
         if(str1.length()!=str2.length()){
-         return ;
+return;
         }
-        char[]arr1=str1.toCharArray();
-        char[]arr2=str2.toCharArray();
+        char []arr1=str1.toCharArray();
+        char []arr2=str2.toCharArray();
         Arrays.sort(arr1);
         Arrays.sort(arr2);
         if(Arrays.equals(arr1, arr2)){
-            System.out.println("The string is anagram of each other");
+            System.out.println("The Strings are anagram of each other" );
         }else{
-            System.out.println("THe strings is not anagram of each other");
+            System.out.println("The Strings are not anagram of each other");
         }
     }
 }

@@ -1,20 +1,17 @@
 public class countopenparenthesis {
    public static void main(String[] args) {
     String str="((()()))";
-    int currendepth=0;
-    int maxdepth=0;
-    for(int i=0;i<str.length();i++){
-        char ch=str.charAt(i);
-        if(ch=='('){
-            currendepth++;
-            if(currendepth>maxdepth){
-                maxdepth=currendepth;
-            }
-        }
-        else if(ch==')'){
-            currendepth--;
+    int curentopen=0;
+    int maxopen=0;
+    for(int i=0;i<str.length()-1;i++){
+        if(str.charAt(i)=='('){
+            curentopen++;
+        }else if(curentopen>maxopen){
+            maxopen=curentopen;
+        }else if(str.charAt(i)==')'){
+            maxopen--;
         }
     }
-    System.out.println("Maximum nesting depth :"+maxdepth);
+    System.out.println("Maximum nesting open bracket is :"+maxopen);
    }
 }
