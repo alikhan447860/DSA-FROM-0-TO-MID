@@ -14,14 +14,12 @@ public class counttheocc {
                     count++;
                     left--;
                 }
-
                 // Check for duplicates to the right
                 int right = mid + 1;
                 while (right < arr.length && arr[right] == tar) {
                     count++;
                     right++;
                 }
-
                 break; 
              }else if(arr[mid]<tar){
                 start=mid+1;
