@@ -1,31 +1,13 @@
-public class countgoodnumRecursion {
+import java.util.*;
+public class finddup {
     public static void main(String[] args) {
-        int lowerBound = 1;
-        int upperBound = 100;
-        int goodCount = countGoodNum(lowerBound, upperBound, 0);
-        System.out.println("Count of good numbers is: " + goodCount);
-    }
-
-    public static int countGoodNum(int current, int upperBound, int count) {
-        if (current > upperBound) {
-            return count; // Stop the recursion when current exceeds upperBound
-        }
-
-        if (isGoodNum(current)) {
-            count++; // Increment count if current number is a good number
-        }
-
-        return countGoodNum(current + 1, upperBound, count); // Recurse with the next number
-    }
-
-    public static boolean isGoodNum(int number) {
-        while (number > 0) {
-            int digit = number % 10;
-            if (digit % 2 != 0) { // Check if any digit is odd
-                return false; // Return false if a digit is odd
+       int arr[]={12,23,21,23,45};
+       for(int i=0;i<arr.length-1;i++){
+        for(int j=i+1;j<arr.length-1;j++){
+            if(arr[i]==arr[j+1]){
+                System.out.println("Element has duplicate value in array "+arr[j]);
             }
-            number = number / 10; // Remove the last digit
         }
-        return true; // Return true if all digits are even
+       }
     }
 }
