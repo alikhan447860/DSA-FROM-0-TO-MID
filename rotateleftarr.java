@@ -1,17 +1,23 @@
 public class rotateleftarr {
     public static void main(String[] args) {
-        int arr[]={1,2,3,4,5,6};
-        int k=3;
-        int rotatedarr[]=new int[arr.length];
-        int index=0;
-        for(int i=k;i<arr.length;i++){
-rotatedarr[index++]=arr[i];
+        int arr[] = {1, 2, 3, 4, 5, 6}; // Original array
+        int k = 2; // Number of positions to rotate
+        int n = arr.length;
+        // Ensure rotation is within bounds
+        k = k % n;
+        int rotatearr[] = new int[n]; // Array to store rotated values
+        int index = 0;
+        // Copy elements from index k to the end
+        for (int i = k; i < n; i++) {
+            rotatearr[index++] = arr[i];
         }
-        for(int i=0;i<k;i++){
-            rotatedarr[index++]=arr[i];
+        // Copy elements from the beginning to index k
+        for (int i = 0; i < k; i++) {
+            rotatearr[index++] = arr[i];
         }
-        for(int val:rotatedarr){
-            System.out.print(" "+val);
+        // Print the rotated array
+        for (int val : rotatearr) {
+            System.out.print(val + " ");
         }
     }
 }
