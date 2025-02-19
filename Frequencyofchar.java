@@ -1,7 +1,7 @@
 import java.util.*;
 public class Frequencyofchar{
     public static void main(String[] args) {
-        String str="Hello World";
+        String str="Hello You";
         HashMap<Character,Integer>freqmap=new HashMap<>();
         for(int i=0;i<str.length();i++){
             char ch=str.charAt(i);
